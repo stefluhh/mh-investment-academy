@@ -19,6 +19,52 @@ export default function Dashboard() {
 
   return (
     <Box>
+      {/* Hero Section */}
+      <Box
+        sx={{
+          mx: { xs: -2, sm: -3 },
+          mt: { xs: -3 },
+          mb: 3,
+          position: 'relative',
+          borderRadius: { xs: 0, sm: '0 0 16px 16px' },
+          overflow: 'hidden',
+        }}
+      >
+        <Box
+          component="img"
+          src="https://framerusercontent.com/images/GF3TyFl047BP15W1ef4wLPVKzSg.jpg?scale-down-to=1024&width=1920&height=1080"
+          alt="MH Investment Academy"
+          sx={{
+            width: '100%',
+            height: { xs: 200, sm: 240 },
+            objectFit: 'cover',
+            display: 'block',
+          }}
+        />
+        <Box
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to top, rgba(28,63,58,0.95) 0%, rgba(28,63,58,0.4) 100%)',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-end',
+            p: { xs: 2, sm: 3 },
+          }}
+        >
+          <Typography sx={{ color: '#ffb959', fontWeight: 600, fontSize: 11, textTransform: 'uppercase', letterSpacing: 1.5, mb: 0.5 }}>
+            MH Investment Academy
+          </Typography>
+          <Typography sx={{ color: '#fff', fontWeight: 700, fontSize: { xs: 18, sm: 22 }, lineHeight: 1.3, mb: 1 }}>
+            Lerne Investieren wie ein Profi
+          </Typography>
+          <Typography sx={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, lineHeight: 1.5 }}>
+            Praxisnahe Kurse von Hedgefonds-Manager Moritz Hessel — von den Grundlagen bis zu fortgeschrittenen Strategien.
+          </Typography>
+        </Box>
+      </Box>
+
+      {/* Greeting */}
       <Box sx={{ mb: 3 }}>
         <Typography sx={{ fontSize: 13, color: 'text.secondary' }}>
           Willkommen zurück,
