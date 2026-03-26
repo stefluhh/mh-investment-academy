@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 interface StatItem {
   label: string;
   value: number;
+  onClick?: () => void;
 }
 
 interface StatBarProps {
@@ -15,6 +16,7 @@ export default function StatBar({ items }: StatBarProps) {
       {items.map((item) => (
         <Box
           key={item.label}
+          onClick={item.onClick}
           sx={{
             flex: 1,
             bgcolor: 'secondary.main',
@@ -22,6 +24,9 @@ export default function StatBar({ items }: StatBarProps) {
             py: 1.5,
             px: 1,
             textAlign: 'center',
+            cursor: item.onClick ? 'pointer' : 'default',
+            transition: 'opacity 0.2s',
+            '&:hover': item.onClick ? { opacity: 0.85 } : {},
           }}
         >
           <Typography sx={{ fontSize: 22, fontWeight: 700, color: 'warning.main' }}>
